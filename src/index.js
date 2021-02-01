@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';
 import './index.css';
 import App from './App';
@@ -10,7 +10,7 @@ import ViewCaptions from './ViewCaptions';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(  
-  	<HashRouter basename={process.env.PUBLIC_URL}>  		
+  	<BrowserRouter basename={process.env.PUBLIC_URL}>  		
   		<Switch>
   			<Route exact path="/" component={App} />  			
   			<ProtectedRoute exact path="/home" component={Home} />
@@ -18,7 +18,7 @@ ReactDOM.render(
   			<ProtectedRoute exact path="/view/captions" component={ViewCaptions} />
 			  <Route path="*" render={() => <h1>Page Not Found!</h1>} />
 	   	</Switch>	   	
-    </HashRouter>,  
+    </BrowserRouter>,  
   document.getElementById('root')
 );
 

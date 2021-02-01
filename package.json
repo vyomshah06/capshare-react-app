@@ -1,6 +1,5 @@
 {
-  "name": "capshare-react-app",
-  "homepage": "http://vyomshah06.github.io/capshare-react-app",
+  "name": "capshare-react-app",  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,9 +21,7 @@
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
-  "scripts": {
-	"predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+  "scripts": {	
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
