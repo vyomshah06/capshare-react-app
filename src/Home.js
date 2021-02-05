@@ -697,7 +697,7 @@ export default function Home (props) {
 							<Divider variant="middle" style={{color: '#282c34', marginBottom: '40px'}}/>
 							{
 								loading ? <CircularProgress size="2rem" color="inherit" />
-								: (captions.length > 0 ? captionView(captions) : <Typography>No results found.</Typography>)
+								: (captions.length > 0 ? captionView('0', captions) : <Typography>No results found.</Typography>)
 							}
 							</div>
 						)
@@ -708,7 +708,7 @@ export default function Home (props) {
 							<Divider variant="middle" style={{color: '#282c34', marginBottom: '40px'}}/>
 							{
 								loading ? <CircularProgress size="2rem" color="inherit" />
-								: (captions.length > 0 ? captionView(captions) : <Typography>No results found.</Typography>)
+								: (captions.length > 0 ? captionView('0', captions) : <Typography>No results found.</Typography>)
 							}
 							</div>
 						)
