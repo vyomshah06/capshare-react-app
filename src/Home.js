@@ -436,11 +436,11 @@ export default function Home (props) {
 			        	<Grid container justifycontent='center' alignItems='center'
 			        	  style={{padding: '5px'}}>
 			        		<Grid item xs={12} sm={9}>				        	
-						        <TextField id={tabindex} defaultValue={captionText}
+						        <TextField id={'tab-' + tabindex} defaultValue={captionText}
 						          variant="outlined" fullWidth InputProps={{readOnly: true}} />
 			        		</Grid>
 			        		<Grid item xs={12} sm={3} style={{textAlign: 'center'}}>
-				        		<Button onClick={handleCopy} 
+				        		<Button id={tabindex} onClick={handleCopy} 
 				        	  	  variant="contained" color="primary">
 				        	  		Copy to Clipboard
 				        		</Button>
@@ -541,9 +541,11 @@ export default function Home (props) {
 	}	  
 
 
-	const handleCopy = (event) => {
-		var caption_text = document.getElementById(tabindex);		
-		caption_text.focus();		
+	const handleCopy = (event) => {		
+		var captext = 'tab-' + tabindex;		
+		const caption_text = document.getElementById(captext);		
+		caption_text.focus();
+		caption_text.setSelectionRange(0, caption_text.value.length);
 		document.execCommand('copy');
 		setCopyMsg('Caption text copied successfully!');		
 	}	
