@@ -543,8 +543,7 @@ export default function Home (props) {
 
 	const handleCopy = (event) => {
 		var caption_text = document.getElementById(tabindex);		
-		caption_text.focus();
-		caption_text.setSelectionRange(0, caption_text.value.length);
+		caption_text.focus();		
 		document.execCommand('copy');
 		setCopyMsg('Caption text copied successfully!');		
 	}	
